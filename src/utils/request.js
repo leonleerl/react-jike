@@ -1,6 +1,6 @@
 // axios的封装处理
 
-const { default: axios } = require("axios");
+import axios from "axios";
 
 // 1. 根域名配置
 // 2. 超时时间
