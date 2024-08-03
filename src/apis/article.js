@@ -1,5 +1,5 @@
 // 封装和文章相关的接口函数
-const { request } = require("@/utils");
+import { request } from "@/utils";
 
 // 获取频道列表请求
 export function getChannelAPI() {
@@ -15,5 +15,14 @@ export function createArticleAPI(data) {
     url: "mp/articles?draft=false",
     method: "POST",
     data,
+  });
+}
+
+//获取文章列表
+export function getArticleListAPI(params) {
+  return request({
+    url: "/mp/articles",
+    method: "GET",
+    params,
   });
 }

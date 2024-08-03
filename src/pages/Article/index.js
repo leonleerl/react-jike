@@ -15,6 +15,8 @@ import { Table, Tag, Space } from "antd";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import img404 from "@/assets/error.png";
 import { useChannel } from "@/hooks/useChannel";
+import { useEffect, useState } from "react";
+import { getArticleListAPI } from "@/apis/article";
 
 const { Option } = Select;
 const { RangePicker } = DatePicker;
@@ -91,7 +93,15 @@ const Article = () => {
       title: "wkwebview离线化加载h5资源解决方案",
     },
   ];
-
+  // // 获取文章列表
+  // const [list, setlist] = useState([]);
+  // useEffect(() => {
+  //   async function getList() {
+  //     const res = await getArticleListAPI();
+  //     setlist(res.data.results);
+  //   }
+  //   getList();
+  // }, []);
   return (
     <div>
       <Card
